@@ -6,7 +6,7 @@
 #include <QSqlRecord>
 #include <QCryptographicHash>
 #include <QMessageBox>
-Formulario::Formulario(QWidget *parent) : QWidget(parent)
+Formulario::Formulario(QWidget *parent) : QWidget(parent),adminDB( new AdminDB( this ))
 {
     layout = new QGridLayout ;
     lUsuario = new QLabel;
@@ -41,7 +41,7 @@ Formulario::Formulario(QWidget *parent) : QWidget(parent)
 
     this->setLayout( layout );
 
-    QStringList headers2 = { "USUARIO", "NOMBRE", "APELLIFO" };
+    QStringList headers2 = { "USUARIO", "NOMBRE", "APELLIDO" };
     teSelect->setHorizontalHeaderLabels(headers2);
 
     qDebug()<<"formulario;";

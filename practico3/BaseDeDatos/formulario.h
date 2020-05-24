@@ -7,6 +7,8 @@
 #include <QString>
 #include <QStringList>
 #include <QVector>
+#include <QTableWidget>
+#include <QComboBox>
 
 class Formulario : public QWidget
 {
@@ -29,16 +31,22 @@ private:
     QLineEdit * leNombre;
     QLineEdit * leApellido;
 
-    QPushButton * pbInsertar;
-    QPushButton * pbBorrar;
-    QPushButton * pbBuscar;
+    QPushButton * pb;
 
     AdminDB * adminDB;
 
+    QComboBox * tipo;
+    QTableWidget *teSelect;
+    
+    
+    void mostrar();
+    void insertar();
+    void borrar();
+    
     bool NoRepetido(QString user);
-
-private slots:
-    void slot_insertar();
+    
+    private slots:
+    void slot_pb();
 };
 
 #endif // FORMULARIO_H

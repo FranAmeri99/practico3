@@ -50,6 +50,8 @@ void Login::slot_validar()  {
     if ( ! nombre_apellido.isEmpty() )  {
         qDebug() << nombre_apellido.first();
         qDebug() << nombre_apellido.last();
+
+        qDebug() <<
         QMessageBox::information( this, "Usuario valido", "Hola " + nombre_apellido.first()
                                   + nombre_apellido.last() + ". Bienvenido!!!" );
       //  Formulario formulario;
